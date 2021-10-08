@@ -1,11 +1,13 @@
 import './App.css';
-import SimpleForm from './components/Step19/SimpleForm';
+import FormicContainer from './components/Step20/components/FormicContainer';
+// import SimpleForm from './components/Step19/SimpleForm';
 
 function App() {
   return (
     <div className="App">
       
-      <SimpleForm/> 
+      {/* <SimpleForm/>  */}
+      <FormicContainer/>
     </div>
   );
 }
@@ -75,3 +77,7 @@ export default App;
 
 //Step 19
 //Load save data and reset data
+
+
+//Step 20
+//Reusable Components

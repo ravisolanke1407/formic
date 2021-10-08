@@ -40,8 +40,7 @@ const validationSchema = Yup.object({
     email: Yup.string().email("Invalid Email Format").required("Required"),
     channel: Yup.string().required("Required"),
     // comments: Yup.string().required("Required"),
-    address: Yup.string().required("Required"),
-
+    address: Yup.string().required("Required")
 })
 
 const validateComments =value =>{
@@ -94,7 +93,6 @@ function SimpleForm() {
                     <ErrorMessage name="channel" component={TextError}/>
                 </div>
 
-                
                 <div className="form-control">
                     <label htmlFor="comments">Comments</label>
                     <Field as="textarea" type="text" id="comments" name="comments" validate={validateComments}/>
@@ -171,8 +169,9 @@ function SimpleForm() {
                        }
                     </FieldArray>
                 </div>
+               
+               
                 <button type="button" onClick={()=>setFormValues(savedData)}>Load data</button>
-
                 <button type="submit" disabled={!formic.isValid || formic.isSubmitting} >Submit</button>
             </Form>
       
